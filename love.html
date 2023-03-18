@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白王歆月</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>亲爱的王歆月</h1>
+        <p>为了表达我对你的爱意，我特意准备了一个小惊喜！</p>
+        <button id="loveBtn">点击这里</button>
+        <p id="result" style="display: none;"></p>
+    </div>
+
+    <script>
+        const loveBtn = document.getElementById('loveBtn');
+        const result = document.getElementById('result');
+
+        const loveMessages = [
+            "你是我见过的最可爱的人！",
+            "你是我的小幸运！",
+            "和你在一起的每一天都是最美好的！",
+            "只要看到你，我就忍不住笑了！",
+            "你是我的世界！",
+            "每时每刻，我都在想着你！",
+        ];
+
+        loveBtn.addEventListener('click', () => {
+            const messageIndex = Math.floor(Math.random() * loveMessages.length);
+            result.textContent = loveMessages[messageIndex];
+            result.style.display = 'block';
+            loveBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
